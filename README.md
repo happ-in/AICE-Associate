@@ -1,6 +1,6 @@
 # [AICE-Associate](https://aice.study/info/aice/asso)
 
-## 📝 시험정보()
+## 📝 시험정보
 - 14문항 / 90분
 - 100점 만점 중 80점 이상 합격
 - 공식 레퍼런스 사이트 오픈북
