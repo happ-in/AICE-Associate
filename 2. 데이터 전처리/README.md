@@ -129,14 +129,14 @@ df['Color_Label'] = le.fit_transform(df['Color'])
 ```python
 # 1. pandas get_dummies
 import pandas as pd
-pd.get_dummies(df['Color']) # True/False
-pd.get_dummies(Df['Color'], dtype=int) # 0/1
+pd.get_dummies(df['Color'], drop_first=True) # True/False
+pd.get_dummies(df['Color'], drop_first=True, dtype=int) # 0/1
 ```
 ```python
 # 2. scikit-learn OneHotEncoder
 from sklearn.preprocessing import OneHotEncoder
-ohe = OneHotEncoder()
-encoded = ohe.fit_transform(df[['Color']], drop='fisrt') # drop='first' 다중공선성 방지
+ohe = OneHotEncoder(drop='fisrt') # drop='first' 다중공선성 방지
+encoded = ohe.fit_transform(df[['Color']]) 
 ```
 ### Train/Test 데이터셋 분할
 ```python
