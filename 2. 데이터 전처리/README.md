@@ -107,6 +107,7 @@ scaler = RobustScaler()
 ### 라벨 인코딩/원핫 인코딩
 - Label Encoding <br>
 범주형 카테고리에 숫자를 부여하는 방식. <br>
+`['Red', 'Blue', 'Green']` → `[1, 2, 3]`<br>
 숫자를 관계의 의미로 받아들여질 수 있어 순서 정보가 있는 범주형 변수에 적합.
 
 ```python
