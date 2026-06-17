@@ -55,6 +55,37 @@ pred = model.predict(X_valid)
 
 
 ### 딥러닝 모델 학습
+- 입력층/은닉층/출력층으로 구성
+
+#### 라이브러리
+```python
+# 라이브러리
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Conv2D
+```
+- Sequential : 레이어를 쌓기 위한 틀
+- Dense : 모든 노드를 이어주는 레이어 층
+![alt text](dense_explanation.png)
+- LSTM : 시계열 데이터
+- Conv2D : 이미지 데이터
+
+```python
+# 1. 모델 설계(ANN)
+model = Sequential([
+    # 입력층에 이미지인 경우, Conv2D 시계열인 경우, LSTM을 사용
+    Dense(64, activation='relu', input_shape=(10,)),
+    Droupout(0.3), # 30% 뉴런을 랜덤으로 끊어 과적합 방지
+    Dense(32),
+    Dense(1)
+])
+
+# 2. 컴파일
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics='accuracy'])
+
+# 3. 학습
+history = model.fit(X_train, y_train, epochs=5, batch_size=32, verbose=1)
+```
+
 ### 모델 성능 평가 및 시뮬레이션
 - 회귀 : MSE, RMSE, R2
 - 분류 : Accuracy, Recall, F1-Score
