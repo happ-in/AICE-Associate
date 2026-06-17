@@ -64,7 +64,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Conv2D
 ```
 - Sequential : 레이어를 쌓기 위한 틀
-- Dense : 모든 노드를 이어주는 레이어 층
+- Dense : 모든 노드를 이어주는 레이어 층  
 ![alt text](dense_explanation.png)
 - LSTM : 시계열 데이터
 - Conv2D : 이미지 데이터
