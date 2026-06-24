@@ -39,7 +39,7 @@ model.fit(X_train, y_train)
 
 # 데이터 예측
 pred = model.predict_proba(X_valid) # 확률 확인 
-result = model.predic(X_valid) # 최종 예측 결과
+result = model.predict(X_valid) # 최종 예측 결과
 ```
 - 의사결정나무(분류)
 ```Python
