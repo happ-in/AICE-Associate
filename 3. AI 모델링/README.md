@@ -81,7 +81,7 @@ model = Sequential([
 ])
 
 # 2. 컴파일
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics='accuracy'])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # 3. 학습
 history = model.fit(X_train, y_train, epochs=5, batch_size=32, verbose=1)
